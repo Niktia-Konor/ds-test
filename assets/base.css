@@ -2331,3 +2331,93 @@ details-disclosure > details {
   }
 }
 
+/* My code */
+
+@font-face {
+  font-family: 'F37 Ginger';
+  src: url('f37ginger-regular.woff') format('woff'),
+  url('f37ginger-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.product-card {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+}
+
+.product-card__image-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 60px;
+  border-radius: 20px;
+  transition: background-color 0.4s;
+}
+
+.product-card:hover .product-card__image-wrapper {
+  background-color: var(--featured-collection-card-hover);
+}
+
+.product-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-card__label {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #D7D2CC;
+  line-height: normal;
+}
+
+.product-card__label-image {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.product-card__per-day {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.8rem;
+  line-height: 1.32;
+  text-align: right;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.product-card:hover .product-card__per-day {
+  opacity: 1;
+}
+
+.product-card__per-day-value {
+  font-size: 2.8rem;
+}
+
+.product-card__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  line-height: 1.32;
+  color: inherit;
+}
+
+.product-card__price {
+  font-size: 1.6rem;
+  line-height: 1.32;
+}

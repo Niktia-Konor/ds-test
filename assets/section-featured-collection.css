@@ -1,0 +1,48 @@
+.featured-collection {
+  padding-top: 132px;
+  padding-bottom: 93px;
+  background-color: var(--featured-collection-background-color);
+  font-family: 'F37 Ginger', sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--featured-collection-font-color);
+}
+
+.featured-collection__title {
+  max-width: 612px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-family: inherit;
+  font-size: 4rem;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: 1.3;
+  color: inherit;
+}
+
+.featured-collection__description {
+  max-width: 736px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 80px;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: 1.58;
+  color: inherit;
+}
+
+.featured-collection__wrapper {
+  display: flex;
+  margin: 0 -10px;
+}
+
+.featured-collection__product {
+  width: 25%;
+  padding: 0 10px;
+}

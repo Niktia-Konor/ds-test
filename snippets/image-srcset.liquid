@@ -1,0 +1,55 @@
+{%- capture image_srcset -%}
+  {%- if image.width >= 165 -%}{{ image | img_url: '165x'}} 165w,{%- endif -%}
+  {%- if image.width >= 270 -%}{{ image | img_url: '270x'}} 270w,{%- endif -%}
+  {%- if image.width >= 360 -%}{{ image | img_url: '360x'}} 360w,{%- endif -%}
+  {%- if image.width >= 460 -%}{{ image | img_url: '460x'}} 460w,{%- endif -%}
+  {%- if image.width >= 535 -%}{{ image | img_url: '535x'}} 535w,{%- endif -%}
+  {%- if image.width >= 620 -%}{{ image | img_url: '620x'}} 620w,{%- endif -%}
+  {%- if image.width >= 720 -%}{{ image | img_url: '720x'}} 720w,{%- endif -%}
+  {%- if image.width >= 900 -%}{{ image | img_url: '900x'}} 900w,{%- endif -%}
+  {%- if image.width >= 1100 -%}{{ image | img_url: '1100x' }} 1100w,{%- endif -%}
+  {%- if image.width >= 1440 -%}{{ image | img_url: '1440x' }} 1440w,{%- endif -%}
+  {%- if image.width >= 1640 -%}{{ image | img_url: '1640x' }} 1640w,{%- endif -%}
+  {%- if image.width >= 1920 -%}{{ image | img_url: '1920x' }} 1920w,{%- endif -%}
+  {%- if image.width >= 2140 -%}{{ image | img_url: '2140x' }} 2140w,{%- endif -%}
+  {%- if image.width >= 2340 -%}{{ image | img_url: '2340x' }} 2340w,{%- endif -%}
+  {%- if image.width >= 2500 -%}{{ image | img_url: '2500x' }} 2500w{%- endif -%}
+{%- endcapture -%}
+
+{% if mobile_image != blank %}
+  {%- capture mobile_image_srcset -%}
+    {%- if mobile_image.width >= 165 -%}{{ mobile_image | img_url: '165x'}} 165w,{%- endif -%}
+    {%- if mobile_image.width >= 270 -%}{{ mobile_image | img_url: '270x'}} 270w,{%- endif -%}
+    {%- if mobile_image.width >= 360 -%}{{ mobile_image | img_url: '360x'}} 360w,{%- endif -%}
+    {%- if mobile_image.width >= 460 -%}{{ mobile_image | img_url: '460x'}} 460w,{%- endif -%}
+    {%- if mobile_image.width >= 535 -%}{{ mobile_image | img_url: '535x'}} 535w,{%- endif -%}
+    {%- if mobile_image.width >= 620 -%}{{ mobile_image | img_url: '620x'}} 620w,{%- endif -%}
+    {%- if mobile_image.width >= 720 -%}{{ mobile_image | img_url: '720x'}} 720w,{%- endif -%}
+    {%- if mobile_image.width >= 900 -%}{{ mobile_image | img_url: '900x'}} 900w,{%- endif -%}
+    {%- if mobile_image.width >= 1100 -%}{{ mobile_image | img_url: '1100x' }} 1100w,{%- endif -%}
+    {%- if mobile_image.width >= 1440 -%}{{ mobile_image | img_url: '1440x' }} 1440w,{%- endif -%}
+    {%- if mobile_image.width >= 1640 -%}{{ mobile_image | img_url: '1640x' }} 1640w,{%- endif -%}
+    {%- if mobile_image.width >= 1920 -%}{{ mobile_image | img_url: '1920x' }} 1920w,{%- endif -%}
+    {%- if mobile_image.width >= 2140 -%}{{ mobile_image | img_url: '2140x' }} 2140w,{%- endif -%}
+    {%- if mobile_image.width >= 2340 -%}{{ mobile_image | img_url: '2340x' }} 2340w,{%- endif -%}
+    {%- if mobile_image.width >= 2500 -%}{{ mobile_image | img_url: '2500x' }} 2500w{%- endif -%}
+  {%- endcapture -%}
+{% endif %}
+
+<picture>
+  {% if mobile_image != blank %}
+    <source srcset="{{- mobile_image_srcset -}}" media="(max-width: 749px)">
+  {% endif %}
+
+  <img
+    srcset="{{- image_srcset -}}"
+    src="{{- image | img_url: '50x' -}}"
+    {% if classes != blank %}
+      class="{{- classes -}}"
+    {% endif %}
+    alt="{{- image.alt -}}"
+    loading="lazy"
+    width="{{ image.width }}"
+    height="{{ image.width | divided_by: image.aspect_ratio }}"
+  >
+</picture>
