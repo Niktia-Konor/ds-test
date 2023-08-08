@@ -1,12 +1,75 @@
 {
   "sections": {
+    "featured_products": {
+      "type": "featured-collection",
+      "settings": {
+        "background_color": "#ffffff",
+        "font_color": "#363636",
+        "title": "Have you had your daily dose of vit today?",
+        "description": "Whether you need a daily pick-me up or a little sleep support, our products are developed with the end goal in mind. Optimally-dosed, highly bioavailable formulas means you can see and feel results that set you on a path to better health.",
+        "collection": "vit",
+        "button_text": "See All Products",
+        "button_background_color": "#00afa9",
+        "button_font_color": "#ffffff",
+        "card_hover": "#fff9c0"
+      }
+    },
+    "24f894ba-68bd-4eb6-ad53-1384c685e565": {
+      "type": "reviews",
+      "blocks": {
+        "74794cb0-004e-4186-9907-5faf6494ed67": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_37.png",
+            "stars": 2,
+            "title": "Walking on Sunshine",
+            "text": "“These little softgels have helped boost my mood and keep me in a positive head space during all the chaos of everyone coming back to work since covid. I suffer from anxiety and depression and this has helped”",
+            "author": "Amber",
+            "product": "immunity"
+          }
+        },
+        "a0251d75-a159-4c1d-9c32-351612860169": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_37_1.png",
+            "stars": 5,
+            "title": "Complete one Eighty in the Mood Department",
+            "text": "“I’ve been one to get frustrated easily while dealing with stressful situations, either while working or with people. But I got annoyed with feeling this way, so I decided to look online and see what  I could find. Came across these and ...”",
+            "author": "Aicia",
+            "product": "cloud-nine"
+          }
+        },
+        "de14ae52-8f9b-4936-80af-a13a454e6f57": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_37_2.png",
+            "stars": 5,
+            "title": "Love this!!!",
+            "text": "“I love this vitamin, it is so tiny but packs a major punch! This has helped massively with my anxiety and has helped boost me up a little too!”",
+            "author": "Amber",
+            "product": "heart-minds"
+          }
+        }
+      },
+      "block_order": [
+        "74794cb0-004e-4186-9907-5faf6494ed67",
+        "a0251d75-a159-4c1d-9c32-351612860169",
+        "de14ae52-8f9b-4936-80af-a13a454e6f57"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "font_color": "#363636",
+        "title": "Why People Love Us"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand"
+            "heading": "Talk about your brand",
+            "heading_size": "medium"
           }
         },
         "button": {
@@ -14,7 +77,10 @@
           "settings": {
             "button_label_1": "Shop all",
             "button_link_1": "shopify:\/\/collections\/all",
-            "button_label_2": ""
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
@@ -23,7 +89,14 @@
         "button"
       ],
       "settings": {
-        "desktop_text_box_position": "flex-end"
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_text_box_position": "flex-end",
+        "show_text_box": true,
+        "image_overlay_opacity": 0,
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "rich_text": {
@@ -32,16 +105,22 @@
         "heading": {
           "type": "heading",
           "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
           }
         },
         "button": {
           "type": "button",
           "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
           }
         }
       },
@@ -51,14 +130,8 @@
         "button"
       ],
       "settings": {
-      }
-    },
-    "featured_products": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "collection": "all",
-        "image_ratio": "square"
+        "color_scheme": "background-1",
+        "full_width": true
       }
     },
     "collage": {
@@ -67,16 +140,26 @@
         "video": {
           "type": "video",
           "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": "Describe the video",
+            "image_padding": false
           }
         },
         "product": {
           "type": "product",
           "settings": {
+            "product": "",
+            "second_image": false,
+            "image_padding": false,
+            "secondary_background": false
           }
         },
         "collection": {
           "type": "collection",
           "settings": {
+            "collection": "",
+            "image_padding": false,
+            "color_scheme": "background-1"
           }
         }
       },
@@ -86,11 +169,18 @@
         "collection"
       ],
       "settings": {
+        "heading": "Multimedia collage",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
       }
     },
     "video": {
       "type": "video",
       "settings": {
+        "heading": "Video",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false
       }
     },
     "multi_column": {
@@ -99,16 +189,22 @@
         "column1": {
           "type": "column",
           "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
           }
         },
         "column2": {
           "type": "column",
           "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
           }
         },
         "column3": {
           "type": "column",
           "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
           }
         }
       },
@@ -118,13 +214,22 @@
         "column3"
       ],
       "settings": {
+        "title": "Multicolumn",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "swipe_on_mobile": false
       }
     }
   },
   "order": [
+    "featured_products",
+    "24f894ba-68bd-4eb6-ad53-1384c685e565",
     "image_banner",
     "rich_text",
-    "featured_products",
     "collage",
     "video",
     "multi_column"

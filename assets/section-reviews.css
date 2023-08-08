@@ -1,0 +1,141 @@
+.reviews {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-color: var(--reviews-background-color);
+  font-family: 'F37 Ginger', sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-align: center;
+  overflow: hidden;
+  color: var(--reviews-font-color);
+}
+
+.reviews__title {
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: 34px;
+  line-height: 1.24;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+.reviews__item-wrapper {
+  height: auto;
+}
+
+.reviews__item-image {
+  display: inline-block;
+  width: 90%;
+  max-width: 100px;
+  height: auto;
+  margin-bottom: -50px;
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 100px);
+  padding-top: 70px;
+  border-radius: 15px;
+  background-color: var(--review-background-color);
+  color: var(--review-font-color);
+}
+
+.reviews__item-stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.reviews__item-stars path {
+  fill: var(--review-stars-color);
+}
+
+.reviews__item-stars .icon-star {
+  margin: 0 3px;
+}
+
+.reviews__item-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 2.4rem;
+  letter-spacing: normal;
+  line-height: 1.25;
+  color: inherit;
+}
+
+.reviews__item-text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 1.58;
+  color: inherit;
+}
+
+.reviews__item-author {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.reviews__item-product {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--review-product-background);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--review-product-font-color);
+  transition: opacity 0.4s;
+}
+
+.reviews__item-product:hover {
+  opacity: 0.7;
+}
+
+.reviews__item-product .icon-arrow-right {
+  margin-left: auto;
+}
+
+.reviews__item-product-image {
+  display: block;
+  width: 92px;
+  height: auto;
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .reviews__item-wrapper {
+    flex-shrink: initial;
+    width: calc(100% / 3);
+    padding: 0 30px;
+  }
+
+  .reviews__wrapper {
+    display: flex;
+    width: auto;
+    margin: 0 -30px;
+  }
+
+  .reviews__item {
+    height: calc(100% - 140px);
+    padding-top: 90px;
+  }
+
+  .reviews__item-image {
+    max-width: 140px;
+    margin-bottom: -70px;
+  }
+
+  .reviews__item-stars {
+    margin-bottom: 25px;
+  }
+
+  .reviews__item-author {
+    margin-bottom: 40px;
+  }
+}

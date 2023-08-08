@@ -2348,6 +2348,12 @@ details-disclosure > details {
   padding: 0 20px;
 }
 
+@media screen and (min-width: 992px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
 .product-card {
   display: block;
   text-decoration: none;

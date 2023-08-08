@@ -506,6 +506,63 @@
         "name": "Blog posts"
       }
     },
+    "reviews": {
+      "name": "Reviews",
+      "blocks": {
+        "review": {
+          "name": "Review",
+          "settings": {
+            "background_color": {
+              "label": "Background Color"
+            },
+            "font_color": {
+              "label": "Font Color"
+            },
+            "image": {
+              "label": "Photo"
+            },
+            "stars": {
+              "label": "Stars Quantity"
+            },
+            "stars_color": {
+              "label": "Stars Color"
+            },
+            "title": {
+              "label": "Heading"
+            },
+            "text": {
+              "label": "Text"
+            },
+            "author": {
+              "label": "Author"
+            },
+            "product": {
+              "label": "Product"
+            },
+            "product_background": {
+              "label": "Product Background Color"
+            },
+            "product_font_color": {
+              "label": "Product Font Color"
+            }
+          }
+        }
+      },
+      "settings": {
+        "background_color": {
+          "label": "Background Color"
+        },
+        "font_color": {
+          "label": "Font Color"
+        },
+        "title": {
+          "label": "Heading"
+        }
+      },
+      "presets": {
+        "name": "Reviews"
+      }
+    },
     "featured-collection": {
       "name": "Featured collection",
       "settings": {
