@@ -524,6 +524,15 @@
         "collection": {
           "label": "Collection"
         },
+        "button_text": {
+          "label": "Button Text"
+        },
+        "button_background_color": {
+          "label": "Button Background Color"
+        },
+        "button_font_color": {
+          "label": "Button Font Color"
+        },
         "card_hover": {
           "label": "Card Hover"
         }

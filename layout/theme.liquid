@@ -29,6 +29,8 @@
 
     {% render 'meta-tags' %}
 
+    <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'mobile-slider.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
@@ -108,6 +110,7 @@
       }
     {% endstyle %}
 
+    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}

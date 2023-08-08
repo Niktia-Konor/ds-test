@@ -5,14 +5,17 @@
   assign description = section.settings.description
   assign collection = section.settings.collection
   assign card_hover = section.settings.card_hover
+  assign button_text = section.settings.button_text
+  assign button_background_color = section.settings.button_background_color
+  assign button_font_color = section.settings.button_font_color
 -%}
 
 {{- 'section-featured-collection.css' | asset_url | stylesheet_tag -}}
 
 {%- capture products -%}
-  {%- for product in collection.products -%}
+  {%- for product in collection.products limit: 4 -%}
     {%- if product != blank -%}
-      <div class="featured-collection__product">
+      <div class="featured-collection__product swiper-slide">
         {%- render 'product-card', product: product -%}
       </div>
     {%- endif -%}
@@ -23,6 +26,8 @@
   --featured-collection-background-color: {{- background_color -}};
   --featured-collection-font-color: {{- font_color -}};
   --featured-collection-card-hover: {{- card_hover -}};
+  --featured-collection-button-background-color: {{- button_background_color -}};
+  --featured-collection-button-font-color: {{- button_font_color -}};
 {%- endcapture -%}
 
 {%- assign styles = styles | strip_newlines -%}
@@ -42,9 +47,25 @@
         </p>
       {%- endif -%}
 
-      <div class="featured-collection__wrapper">
-        {{- products -}}
-      </div>
+      <mobile-slider>
+        <div class="featured-collection__slider js-mobile-slider">
+          <div class="featured-collection__wrapper swiper-wrapper">
+            {{- products -}}
+          </div>
+
+          <div class="featured-collection__pagination js-mobile-slider-pagination">
+
+          </div>
+        </div>
+      </mobile-slider>
+
+      {%- if button_text != blank -%}
+        <div class="featured-collection__button-wrapper">
+          <a class="featured-collection__button" href="{{- collection.url -}}">
+            {{- button_text -}}
+          </a>
+        </div>
+      {%- endif -%}
     </div>
   </div>
 {%- endif -%}
@@ -82,6 +103,24 @@
       "type": "collection",
       "id": "collection",
       "label": "t:sections.featured-collection.settings.collection.label"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "t:sections.featured-collection.settings.button_text.label",
+      "default": "See All Products"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "t:sections.featured-collection.settings.button_background_color.label",
+      "default": "#00AFA9"
+    },
+    {
+      "type": "color",
+      "id": "button_font_color",
+      "label": "t:sections.featured-collection.settings.button_font_color.label",
+      "default": "#FFFFFF"
     },
     {
       "type": "color",
